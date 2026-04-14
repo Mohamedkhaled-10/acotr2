@@ -22,7 +22,6 @@ export function renderSiteHeader() {
       <nav class="site-nav" aria-label="التنقل الرئيسي">
         ${navItem("index.html", "الرئيسية", "index", activePage)}
         ${navItem("favorites.html", "المفضلة", "favorites", activePage)}
-        ${navItem("dashboard.html", "الداشبورد", "dashboard", activePage)}
       </nav>
 
       <form class="site-search" data-global-search action="index.html" method="get">
@@ -40,7 +39,6 @@ export function renderSiteHeader() {
 
       <div class="site-actions">
         <button class="site-actions__button" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
-        <button class="site-actions__button" type="button" data-demo-login>تسجيل دخول</button>
       </div>
     </div>
   `;
@@ -52,7 +50,7 @@ export function renderSiteFooter() {
   return `
     <div class="site-shell site-shell--footer">
       <p class="site-footer__text">© ${year} مكتبة الممثلات</p>
-      <p class="site-footer__text">واجهة تجريبية متصلة بـ Firebase Realtime Database</p>
+      <p class="site-footer__text">واجهة تجريبيةـ</p>
     </div>
   `;
 }
