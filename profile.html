@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحة الممثلة | مكتبة الممثلات</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="profile">
+  <header data-site-header></header>
+
+  <main class="profile-page" id="main-content">
+    <section class="profile-page__status" data-profile-status aria-live="polite"></section>
+
+    <section class="profile-page__hero" data-profile-hero aria-labelledby="profile-title"></section>
+
+    <section class="profile-page__tabs" aria-label="تفاصيل الممثلة">
+      <div class="profile-page__tablist" role="tablist" aria-label="علامات التبويب">
+        <button class="profile-page__tab-button" type="button" data-tab-button="bio" aria-selected="true">نبذة شخصية</button>
+        <button class="profile-page__tab-button" type="button" data-tab-button="personal" aria-selected="false">المعلومات الشخصية</button>
+        <button class="profile-page__tab-button" type="button" data-tab-button="filmography" aria-selected="false">الأعمال الفنية</button>
+        <button class="profile-page__tab-button" type="button" data-tab-button="gallery" aria-selected="false">معرض الصور</button>
+      </div>
+
+      <section class="profile-page__panel" data-tab-panel="bio" role="tabpanel" aria-hidden="false"></section>
+      <section class="profile-page__panel" data-tab-panel="personal" role="tabpanel" aria-hidden="true" hidden></section>
+      <section class="profile-page__panel" data-tab-panel="filmography" role="tabpanel" aria-hidden="true" hidden></section>
+      <section class="profile-page__panel" data-tab-panel="gallery" role="tabpanel" aria-hidden="true" hidden></section>
+    </section>
+  </main>
+
+  <footer data-site-footer></footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الداشبورد | مكتبة الممثلات</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <header data-site-header></header>
+
+  <main class="dashboard-page" id="main-content">
+    <section class="dashboard-page__status" data-dashboard-status aria-live="polite"></section>
+
+    <section class="dashboard-page__stats" data-dashboard-stats aria-label="إحصائيات عامة"></section>
+
+    <section class="dashboard-page__form-section" aria-labelledby="dashboard-form-title">
+      <h1 id="dashboard-form-title">إضافة / تعديل ممثلة</h1>
+
+      <form class="dashboard-form" data-actress-form>
+        <input type="hidden" name="id" data-editing-id />
+
+        <div class="dashboard-form__section">
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="name">الاسم</label>
+            <input class="dashboard-form__input" id="name" name="name" type="text" required />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="mainImage">رابط الصورة الرئيسية</label>
+            <input class="dashboard-form__input" id="mainImage" name="mainImage" type="url" required />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="bio">Bio</label>
+            <textarea class="dashboard-form__textarea" id="bio" name="bio" rows="5"></textarea>
+          </div>
+        </div>
+
+        <fieldset class="dashboard-form__section">
+          <legend>Personal Info</legend>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="nationality">الجنسية</label>
+            <input class="dashboard-form__input" id="nationality" name="nationality" type="text" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="birthdate">تاريخ الميلاد</label>
+            <input class="dashboard-form__input" id="birthdate" name="birthdate" type="date" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="birthPlace">مكان الميلاد</label>
+            <input class="dashboard-form__input" id="birthPlace" name="birthPlace" type="text" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="height">الطول</label>
+            <input class="dashboard-form__input" id="height" name="height" type="text" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="weight">الوزن</label>
+            <input class="dashboard-form__input" id="weight" name="weight" type="text" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="eyeColor">لون العين</label>
+            <input class="dashboard-form__input" id="eyeColor" name="eyeColor" type="text" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="hairColor">لون الشعر</label>
+            <input class="dashboard-form__input" id="hairColor" name="hairColor" type="text" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="language">اللغة</label>
+            <input class="dashboard-form__input" id="language" name="language" type="text" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="agency">الوكالة</label>
+            <input class="dashboard-form__input" id="agency" name="agency" type="text" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="instagram">Instagram</label>
+            <input class="dashboard-form__input" id="instagram" name="instagram" type="url" />
+          </div>
+
+          <div class="dashboard-form__field">
+            <label class="dashboard-form__label" for="website">Website</label>
+            <input class="dashboard-form__input" id="website" name="website" type="url" />
+          </div>
+        </fieldset>
+
+        <section class="dashboard-form__section">
+          <h2>الصور الإضافية</h2>
+          <div class="dashboard-dynamic-list" data-image-list></div>
+          <button class="dashboard-form__button" type="button" data-add-image-field>إضافة صورة</button>
+        </section>
+
+        <section class="dashboard-form__section">
+          <h2>الأعمال</h2>
+          <div class="dashboard-dynamic-list" data-work-list></div>
+          <button class="dashboard-form__button" type="button" data-add-work-field>إضافة عمل</button>
+        </section>
+
+        <div class="dashboard-form__actions">
+          <button class="dashboard-form__button" type="submit">حفظ</button>
+          <button class="dashboard-form__button" type="button" data-reset-form>إلغاء</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="dashboard-page__table-section" aria-labelledby="dashboard-table-title">
+      <h2 id="dashboard-table-title">كل الممثلات</h2>
+      <table class="dashboard-table">
+        <thead class="dashboard-table__head">
+          <tr>
+            <th>الاسم</th>
+            <th>المشاهدات</th>
+            <th>المفضلة</th>
+            <th>الإجراءات</th>
+          </tr>
+        </thead>
+        <tbody class="dashboard-table__body" data-actresses-table-body></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer data-site-footer></footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

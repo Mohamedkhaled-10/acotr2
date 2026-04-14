@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مكتبة الممثلات</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="index">
+  <header data-site-header></header>
+
+  <main class="index-page" id="main-content">
+    <section class="index-page__hero" aria-labelledby="index-hero-title">
+      <div class="index-page__hero-content">
+        <h1 class="index-page__hero-title" id="index-hero-title">مكتبة الممثلات</h1>
+        <p class="index-page__hero-text">
+         
+        </p>
+        <div class="index-page__hero-meta" data-index-summary></div>
+      </div>
+    </section>
+
+    <section class="index-page__catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title" class="section-title">الأرشيف</h2>
+
+      <div class="index-page__controls">
+        <div class="index-page__control">
+          <label class="index-page__label" for="page-search-input">بحث</label>
+          <input
+            class="index-page__input"
+            id="page-search-input"
+            type="search"
+            data-page-search-input
+            placeholder="ابحث بالاسم أو الجنسية..."
+          />
+        </div>
+
+        <div class="index-page__control">
+          <label class="index-page__label" for="nationality-filter">الجنسية</label>
+          <select class="index-page__select" id="nationality-filter" data-page-nationality-filter>
+            <option value="all">الكل</option>
+          </select>
+        </div>
+
+        <div class="index-page__control">
+          <label class="index-page__label" for="sort-select">الترتيب</label>
+          <select class="index-page__select" id="sort-select" data-page-sort>
+            <option value="popular">الأكثر شعبية</option>
+            <option value="views">الأكثر مشاهدة</option>
+            <option value="favorites">الأكثر تفضيلاً</option>
+            <option value="newest">الأحدث</option>
+            <option value="oldest">الأقدم</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="index-page__status" data-index-status aria-live="polite"></p>
+
+      <div class="index-page__grid" data-actresses-grid aria-live="polite"></div>
+
+      <nav class="index-page__pagination" data-pagination aria-label="تنقل الصفحات"></nav>
+    </section>
+  </main>
+
+  <footer data-site-footer></footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

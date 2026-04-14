@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المفضلة | مكتبة الممثلات</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="favorites">
+  <header data-site-header></header>
+
+  <main class="favorites-page" id="main-content">
+    <section class="favorites-page__status" data-favorites-status aria-live="polite"></section>
+
+    <section class="favorites-page__header" aria-labelledby="favorites-title">
+      <h1 id="favorites-title">المفضلة</h1>
+      <p class="favorites-page__summary" data-favorites-summary></p>
+    </section>
+
+    <section class="favorites-page__grid" data-favorites-grid aria-live="polite"></section>
+  </main>
+
+  <footer data-site-footer></footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
